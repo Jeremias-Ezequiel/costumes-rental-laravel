@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class CostumeStatus extends Model
 {
     protected $fillable = ['description'];
+
+    public function costumes()
+    {
+        return $this->hasMany(Costume::class, 'costumeStatus_id');
+    }
 }
