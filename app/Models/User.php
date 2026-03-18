@@ -15,6 +15,9 @@ use Illuminate\Notifications\Notifiable;
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {
+
+    protected $table = 'users';
+
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable, SoftDeletes;
 
@@ -30,4 +33,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    protected $fillable = ['name', 'email', 'password'];
+
+    protected $hidden = ['password', 'created_at', 'updpated_at', 'email_verified_at'];
 }
