@@ -20,6 +20,8 @@ class UserSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
             'rol_id' => 1,
+            'lastname' => 'Omonte',
+            'username' => 'zedev',
         ]);
     }
 }
