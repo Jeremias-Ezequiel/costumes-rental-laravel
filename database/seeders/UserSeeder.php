@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
             'password' => 'abc123',
             'created_at' => now(),
             'updated_at' => now(),
+            'rol_id' => 1,
         ]);
     }
 }
