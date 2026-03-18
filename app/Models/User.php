@@ -34,7 +34,12 @@ class User extends Authenticatable
         ];
     }
 
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['name', 'email', 'password', 'rol_id'];
 
-    protected $hidden = ['password', 'created_at', 'updpated_at', 'email_verified_at'];
+    protected $hidden = ['password', 'created_at', 'updated_at', 'email_verified_at'];
+
+    public function rol()
+    {
+        return $this->belongsTo(Role::class, 'rol_id');
+    }
 }
