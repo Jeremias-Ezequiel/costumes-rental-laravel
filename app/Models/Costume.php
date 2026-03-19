@@ -19,4 +19,9 @@ class Costume extends Model
     {
         return $this->belongsTo(CostumeStatus::class, 'costumeStatus_id');
     }
+
+    public function rentals()
+    {
+        return $this->hasMany(Rental::class, 'costume_id');
+    }
 }
