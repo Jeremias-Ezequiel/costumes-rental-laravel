@@ -36,7 +36,7 @@ class User extends Authenticatable
 
     protected $fillable = ['name', 'email', 'password', 'rol_id'];
 
-    protected $hidden = ['password', 'created_at', 'updated_at', 'email_verified_at'];
+    protected $hidden = ['password', 'created_at', 'updated_at', 'email_verified_at', 'deleted_at', 'remember_token'];
 
     public function rol()
     {

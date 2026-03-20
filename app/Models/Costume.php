@@ -13,7 +13,7 @@ class Costume extends Model
 
     protected $fillable = ['description', 'size', 'costumeStatus_id'];
 
-    protected $hidden = ['deleted_at'];
+    protected $hidden = ['deleted_at', 'updated_at'];
 
     public function costumeStatuses()
     {
