@@ -9,6 +9,9 @@ class Role extends Model
     protected $table = 'roles';
     protected $fillable = ['description'];
 
+    public const ADMIN = 1;
+    public const  CUSTOMER = 2;
+
     public function users()
     {
         return $this->hasMany(User::class, 'rol_id');
